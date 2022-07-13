@@ -1,7 +1,7 @@
 import React from 'react';
 import { GiAerodynamicHarpoon } from "react-icons/gi";
 
-const Navbar = () => {
+const Navbar = ({children}) => {
     return (
         <header>
         <nav className="navCustom navbar navbar-expand-lg navbar-light">
@@ -26,11 +26,13 @@ const Navbar = () => {
                             <a href="#">Contacto</a>
                         </li>
                     </ul>
+                        <div className="d-flex align-items-center justify-content-end width">
+                            <h2 className="logIn">Registrarse</h2>
+                            <h2 className="logIn">Iniciar Sesión</h2>
+                            
+                        </div>
                 </div>
-                <div className="d-flex">
-                    <h2 className="logIn">Registrarse</h2>
-                    <h2 className="logIn">Iniciar Sesión</h2>
-                </div>
+                    {children}
             </div>
         </nav>
         </header>
