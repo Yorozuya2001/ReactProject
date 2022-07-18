@@ -1,10 +1,18 @@
 import React from 'react'
-import Texto from '../Seccion_1/Texto'
+import ItemCount from '../ItemCont/ItemCount'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ greeting }) => {
+    const onAdd = (value) => {
+        console.log(`Cantidad del producto: ${value}`);
+    }
+
+
     return (
         <>
-            <Texto titulo="Título de la página" texto = "Parráfo" />
+            <div className='d-flex flex-column align-items-center my-5'>
+            <h1>{greeting}</h1>
+            <ItemCount initial = {1} stock = {12} onAdd = {onAdd}/>
+            </div>
         </>
     )
 }
