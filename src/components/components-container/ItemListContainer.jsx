@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemCount from '../ItemCont/ItemCount'
+import ItemList from './itemList'
 
 const ItemListContainer = ({ greeting }) => {
     const onAdd = (value) => {
@@ -11,6 +12,7 @@ const ItemListContainer = ({ greeting }) => {
         <>
             <div className='d-flex flex-column align-items-center my-5'>
             <h1>{greeting}</h1>
+            <ItemList/>
             <ItemCount initial = {1} stock = {12} onAdd = {onAdd}/>
             </div>
         </>
