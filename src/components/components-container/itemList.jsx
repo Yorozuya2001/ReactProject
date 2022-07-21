@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import { getFetch } from "./item"
+import  Preloader  from "./preloader"
 
 const itemList = () => {
 
@@ -20,7 +21,7 @@ const itemList = () => {
         <div className="container mb-5">
             <div className="row justify-content-evenly">
                 {
-                    loading ? <h1>Cargando Atr</h1> :
+                    loading ? <Preloader/> :
                         productos?.map(
                             producto =>
                                 <div key={producto.id} className="col-sm-4 d-flex justify-content-center">
