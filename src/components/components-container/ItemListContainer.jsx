@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react'
-import { getFetch } from "./getFetch"
+import { getFetch } from "./functions"
 import ItemCount from '../ItemCont/ItemCount'
 import ItemList from './itemList'
 import Preloader from "./preloader"
+import { onAdd } from './functions'
 
 
 const ItemListContainer = ({ greeting }) => {
-    const onAdd = (value) => {
-        console.log(`Cantidad del producto: ${value}`);
-    }
+
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    console.log(productos)
 
     useEffect(() => {
         getFetch()
